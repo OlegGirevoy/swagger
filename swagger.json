@@ -1,0 +1,57 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a simple API.",
+    "version": "1.0.0",
+    "title": "Bootcamp API"
+  },
+  "host": "bootcamp.swagger.io",
+  "basePath": "/v2",
+  "tags": [
+    {
+      "name": "client",
+      "description": "client"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/client": {
+      "post": {
+        "tags": [
+          "client"
+        ],
+        "summary": "Create a new client",
+        "description": "",
+        "operationId": "createClient",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Client object that needs to be created ",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "name"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}
